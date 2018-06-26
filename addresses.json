@@ -1,0 +1,12 @@
+{
+  "test": {
+    "normal": {
+      "publicKey": "mwGWwmdZTwBJAnVpQWABnLYKo1GmS5T5CL",
+      "privateKey": "cTnXMoYowXbbZLeSBeTsnHGfN93ewA8xRGAYTqFzhubLeYdRHuL6"
+    },
+    "motherland": {
+      "publicKey": "",
+      "privateKey": ""
+    }
+  }
+}

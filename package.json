@@ -1,0 +1,23 @@
+{
+  "name": "crypto-communism",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ggviana/crypto-communism.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ggviana/crypto-communism/issues"
+  },
+  "homepage": "https://github.com/ggviana/crypto-communism#readme",
+  "dependencies": {
+    "websocket": "1.0.26"
+  }
+}
