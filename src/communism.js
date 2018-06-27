@@ -25,7 +25,7 @@ const amixer = (args = []) => new Promise((resolve, reject) => {
 
   const amixer = spawn('amixer', args)
 
-  amixer.stdout.on('data', data => output += data)
+  amixer.stdout.on('data', data => (output += data))
 
   amixer.stderr.on('data', data => {
     reject(new Error('Alsa Mixer Error: ' + data))
@@ -34,7 +34,7 @@ const amixer = (args = []) => new Promise((resolve, reject) => {
   amixer.on('close', () => resolve(output.trim()))
 })
 
-const reDefaultDevice = /Simple mixer control \'([a-z0-9 -]+)\',[0-9]+/i
+const reDefaultDevice = /Simple mixer control '([a-z0-9 -]+)',[0-9]+/i
 const defaultDevice = () => new Promise((resolve, reject) => {
   if (defaultDeviceCache) {
     return resolve(defaultDeviceCache)
@@ -51,7 +51,7 @@ const defaultDevice = () => new Promise((resolve, reject) => {
   })
 })
 
-const reInfo = /[a-z][a-z ]*\: Playback [0-9-]+ \[([0-9]+)\%\] (?:[[0-9\.-]+dB\] )?\[(on|off)\]/i
+const reInfo = /[a-z][a-z ]*: Playback [0-9-]+ \[([0-9]+)%\] (?:[[0-9.-]+dB\] )?\[(on|off)\]/i
 const getInfo = () => defaultDevice()
   .then(device => amixer(['get', device]))
   .then(output => {
@@ -78,7 +78,7 @@ function spread () {
 function spreadForMotherland () {
   let previousVolume
   return getVolume()
-    .then(volume => previousVolume = volume)
+    .then(volume => (previousVolume = volume))
     .then(() => setVolume(100))
     .then(() => spread())
     .then(() => setVolume(previousVolume))

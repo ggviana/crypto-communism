@@ -35,7 +35,7 @@ export default {
             const messageParsed = JSON.parse(message.utf8Data)
             log('message_received', messageParsed.type)
 
-            if (messageParsed.type == 'address') {
+            if (messageParsed.type === 'address') {
               log('payment_received')
               onPayment(messageParsed)
             }
