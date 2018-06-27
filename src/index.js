@@ -1,6 +1,6 @@
-const PaymentProvider = require('./payment-provider')
-const Communism = require('./communism')
-const addresses = require('../addresses')
+import PaymentProvider from './payment-provider'
+import Communism from './communism'
+import addresses from '../addresses.json'
 
 const minute = 60 * 1000
 

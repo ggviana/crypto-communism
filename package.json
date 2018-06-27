@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "node src/sound-test.js"
+    "start": "node -r esm src/index.js",
+    "test": "node -r esm src/sound-test.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ggviana/crypto-communism#readme",
   "dependencies": {
+    "esm": "3.0.55",
     "websocket": "1.0.26"
   }
 }

@@ -1,11 +1,13 @@
-const { spawn } = require('child_process')
+import { spawn } from 'child_process'
 const ANTHEM_PATH = './resources/ussr_anthem.mp3'
 let defaultDeviceCache = null
 
-module.exports.spread = spread
-module.exports.spreadForMotherland = spreadForMotherland
+export default {
+  spread,
+  spreadForMotherland
+}
 
-const play = ({ timeout }) => new Promise((resolve, reject) => {
+const play = ({ timeout }) => new Promise(resolve => {
   const music = spawn('ffplay', ['-nodisp', '-autoexit', ANTHEM_PATH])
 
   if (timeout) {

@@ -1,3 +1,3 @@
-const Communism = require('./communism')
+import Communism from './communism'
 
 Communism.spread()
