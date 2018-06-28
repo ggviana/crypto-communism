@@ -7,7 +7,7 @@ const minute = 60 * 1000
 let connection
 
 const options = {
-  address: addresses.test.publicKey,
+  address: addresses.test.normal.publicKey,
   onPayment: () => Communism.spread(),
   onError: (errorType, error) => {
     switch (errorType) {
