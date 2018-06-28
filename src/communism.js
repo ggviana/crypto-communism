@@ -3,8 +3,7 @@ const ANTHEM_PATH = './resources/ussr_anthem.mp3'
 let defaultDeviceCache = null
 
 export default {
-  spread,
-  spreadForMotherland
+  spread
 }
 
 const play = ({ timeout }) => new Promise(resolve => {
@@ -70,16 +69,14 @@ const getVolume = () => getInfo().then(info => info.volume)
 const setVolume = value => defaultDevice().then(device => amixer(['set', device, value + '%']))
 
 function spread () {
-  return play({
-    timeout: 20000
-  })
-}
-
-function spreadForMotherland () {
   let previousVolume
+  const minute = 60 * 1000
+
   return getVolume()
     .then(volume => (previousVolume = volume))
     .then(() => setVolume(100))
-    .then(() => spread())
+    .then(() => play({
+      timeout: minute
+    }))
     .then(() => setVolume(previousVolume))
 }

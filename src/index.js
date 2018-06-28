@@ -2,7 +2,7 @@ import PaymentProvider from './payment-provider'
 import Communism from './communism'
 import addresses from '../addresses.json'
 
-const minute = 60 * 1000
+const twoMinute = 2 * 60 * 1000
 
 let connection
 
@@ -17,7 +17,7 @@ const options = {
         break
     }
   },
-  timeout: minute
+  timeout: twoMinute
 }
 
 connection = PaymentProvider.connect(options)
