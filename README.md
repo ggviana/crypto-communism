@@ -20,6 +20,7 @@ Run this command:
 npm start
 ```
 And ask your comrades to send their bitcoins to the address below:
+
 `mwGWwmdZTwBJAnVpQWABnLYKo1GmS5T5CL`
 
 ![Pay up!](resources/wallet.png)
