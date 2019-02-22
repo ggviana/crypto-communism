@@ -22,4 +22,4 @@ npm start
 And ask your comrades to send their bitcoins to the address below:
 `mwGWwmdZTwBJAnVpQWABnLYKo1GmS5T5CL`
 
-![Pay up!](resources/wallet.jpg?raw=true "Wallet")
+![Pay up!](resources/wallet.png)
